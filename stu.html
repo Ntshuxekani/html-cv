@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="stu.css"> 
+</head>
+
+<body>
+<section id="rightbox">
+
+Name: <input type = "text" id = "name" placeholder="Enter your name" value = ""> <br>
+
+Surname: <input type = "text" id = "sname" placeholder="Enter your surname" value = ""> <br>
+
+Age: <input type = "text" id = "age" placeholder="Enter your age" value = ""> <br>
+
+<button onclick = "add()">add</button> 
+<button onclick = "display()">display</button>  
+<button onclick = "remove()">delete</button>
+
+
+<div id="container">
+
+</div>
+
+</section>
+
+<script >
+
+var student={name,sname,age};
+var studList=[];
+
+
+function display(){
+
+	for(var i in studList){
+
+	   var ptagName  = document.createElement("p");
+	   ptagName.innerHTML =studList[i]+" ";
+	   var container = document.getElementById("container");
+	   container.appendChild(ptagName);
+	}
+}
+function add(){
+
+  student.name = document.getElementById("name").value;
+  student.sname = document.getElementById("sname").value;
+  student.age = document.getElementById("age").value;
+  var display= student.name+" "+student.sname+" "+student.age;
+  
+    if(student.name=="" )
+	{
+	   alert("please enter your name");
+	}
+	else if(student.sname.length< 3)
+	{
+	   alert("enter a valid surname");
+	}
+	
+	else if (isNaN(student.age))
+	{
+	  alert("enter a valid age");
+	}
+	else
+	{
+	   studList.push(display);
+	}
+	
+    student.name = document.getElementById("name").value=" ";
+    student.sname = document.getElementById("sname").value=" ";
+    student.age = document.getElementById("age").value=" ";
+}
+	
+function remove()
+{
+   var div=document.getElementById("container");
+   div.remove();
+
+   studList=[];
+   
+   var container=document.createElement("div");
+   container.setAttribute("id","container");
+   var sect=document.getElementById("rightbox");
+   sect.appendChild(container);
+   
+
+}
+display()
+
+function update()
+{
+   var div=document.getElementById("container");
+   div.update();
+
+   studList=[];
+   
+   var container=document.createElement("div");
+   container.setAttribute("id","container");
+   var sect=document.getElementById("rightbox");
+   sect.appendChild(container);
+   
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

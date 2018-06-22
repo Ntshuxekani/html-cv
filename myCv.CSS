@@ -1,0 +1,26 @@
+ img{display: block;margin: 0 auto;}
+body {
+    background-image: url("me.jpg");
+}
+ul li{list-style-type:non}
+
+li a:hover{background:#383;}
+
+body{background-color: lightblue;}
+
+
+
+h1{color:green;text-align: center;font-family:"algerian"; text-dedcoration:underline;font-size:40px;}
+h2{color: red;text-align: center;font-family:"algerian"; text-dedcoration:underline;font-size:40px;}
+h3{color: blue;text-align:center;font-family:"algerian"; text-dedcoration:underline;font-size:40px;}
+p{font-family: verdana;font-size: 13px;}
+
+
+#footer{darker: both;padding: .5em;background-color: #ccc;text-align: right;}
+
+#sky{color:black;font-family:"verdana";text-align:left;font-size:30px;}
+#star{color:red;font-family:"arial";text-align:left;font-size:30px;}
+#moon{color:pink;font-family:"calibri";text-align:left;font-size:30px;}
+#formal{color:red;font-family:"algerian";text-align:left;font-size:30px;}
+ 
+ 
